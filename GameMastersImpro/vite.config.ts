@@ -4,9 +4,11 @@ import themePlugin from "@replit/vite-plugin-shadcn-theme-json";
 import path, { dirname } from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 import { fileURLToPath } from "url";
+import { visualizer } from "rollup-plugin-visualizer";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
+
 export default defineConfig({
   plugins: [
     react(),
@@ -20,6 +22,10 @@ export default defineConfig({
           ),
         ]
       : []),
+    visualizer({
+      open: true, // Automatically open the report in your browser
+      filename: "bundle-report.html", // Output file name
+    }),
   ],
   resolve: {
     alias: {
@@ -31,5 +37,13 @@ export default defineConfig({
   build: {
     outDir: path.resolve(__dirname, "dist/public"),
     emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          react: ["react", "react-dom"],
+          lodash: ["lodash"],
+        },
+      },
+    },
   },
 });
