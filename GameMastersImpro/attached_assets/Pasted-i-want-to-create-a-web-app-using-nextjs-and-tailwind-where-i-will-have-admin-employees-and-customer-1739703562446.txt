@@ -1,0 +1,77 @@
+i want to create a web app using nextjs and tailwind where i will have admin, employees and customers. This will be an interactive app for renting games such as scrabble and chess and card games. The games will have qr codes attached to them and the qr will store the name of the game and the branch it will be at. The employee will scan a game for a customer and a timer will start. There will be employees in different locations and they will be assigned in their branches. Once the employee scans a game for a customer a timer will start. The game xosts 3 bob a minute and when stopped it will display the total time taken plus the total cost. The employee will see al the revenue he or she has collected in hisbranch. He will be able to pause and stop a timer for a customer. The customer will also be able to scan a game for himself and see the countdown and pause the timer but it will auto continue after 20 minutes break. After stopping he will see the total cost to pay. the admin will see the total revenue for all employees, how an employee is performing, the active rentals and charts will be implemented in the dashboard. I want all this to be achieved and add various inputs that i have left.
+This a summary of what i want:
+
+STAFF SIDE (POS Interface)
+1. Dashboard
+Real-Time Metrics: Display ongoing rentals, total earnings, inventory status, and active timers.
+Game Performance Insights: Analyze the most rented games, revenue per game, and overall popularity trends.
+Branch Overview: Summarize activity across all branches for centralized monitoring.
+2. Game Inventory Management
+Stock Monitoring: Track real-time availability of games for rent and sale with color-coded status indicators.
+Game Status Updates: Mark games as ,
+Rented Out,
+Available,
+Under Maintenance, or
+ Reserved.
+Low Stock Alerts: Notify admin staff when inventory for a particular game is running low.
+3. Customer Management
+Anonymous Rentals: Allow rentals without requiring personal details for walk-in customers.
+Payment Tracking: Monitor M-Pesa, cash. Employees can manually log cash transactions for accuracy.
+Customer Sign-Up: Move profile creation (name, phone number, rental history) to the Customer Portal on the web interface, where customers can OPTIONALLY sign up after scanning a QR code.
+4. Rental Management
+Timer System: Employees can start, pause (up to 20 minutes), or stop timers. Timers auto-reset for new rentals.
+Alerts and Reminders: Notify staff of rental expiration, pending payments, or customer time extension requests.
+5. Payment Processing
+Multi-Method Payments: Accept payments via M-Pesa, cash, with an option to split payments.
+Receipts: Automatically generate digital receipts for transactions, with options to email or print.
+6. Reporting and Analytics
+***Generate comprehensive reports (daily, weekly, monthly) by
+Employee,
+Branch, or
+Game category.
+Metrics include:
+Top-performing games.
+Average rental durations and peak hours.
+Employee performance tracking.
+7. Employee Features
+Logins for Staff: Assign tasks, manage shifts, and track individual performance.
+GPS Location Tracking: Use real-time GPS to verify employees are at their designated branches or stands.
+Role Management: Assign specific permissions to roles like Manager, staff Attendant.
+---
+CUSTOMER SIDE (QR Code Scanning to Web Interface)
+1. Homepage
+A branded and mobile-optimized interface for GameMaster  with intuitive navigation.
+Personalized welcome screen for returning customers who signed up.
+2. Rental Details
+Display:
+Game name and image.
+Rental rates (e.g., 3 Ksh/min or negotiable to 2 Ksh/min for longer sessions).
+Real-time game availability.
+Pause Feature: Allow customers to pause their session for up to 20 minutes once (e.g., lunch). Timers automatically resume afterward.
+3. Time Tracker
+Show an active countdown or elapsed time alongside the current rental cost.
+Notification for customers when nearing time limits with options to request extensions.
+4. Customer Portal
+Rental History: View past rentals and game ratings from other users (1–10 scale).
+Game Catalog:
+Browse games available for RENT or PURCHASE, with prices and descriptions.
+Favorites: Save favorite games for quicker access during future visits.
+5. Payment Integration
+M-Pesa Instructions: Display clear payment instructions and confirm successful transactions.
+Direct Payments: Integrate with M-Pesa APIs for faster, automated transactions stk push.
+6. Promotions/Offers
+Highlight deals such as:
+Discounts for extended rentals.
+Challenges with prizes for winners.
+Promotions on game purchases.
+7. Feedback and Support
+Feedback Form: Quick form for rating experiences and suggesting improvements.
+Support Options: Live chat or contact form for easy access to assistance.
+8. Overnight Rentals
+Clearly display overnight rental rates and required security deposits.
+Allow customers to book overnight rentals directly via the platform, with automated payment tracking.
+9. Scalability and Future Features
+Prepare for future additions such as:
+Subscription plans for regular customers.
+Loyalty programs rewarding repeat rentals.
+Notifications for new game arrivals, events, or promotions.
